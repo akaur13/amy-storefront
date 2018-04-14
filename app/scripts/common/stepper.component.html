@@ -1,0 +1,20 @@
+<div>
+        <div class="input-group chart-group-grid">
+            <div class="input-group-btn">
+                <button type="button" class="quantity-left-minus btn btn-number" id="stepUp" data-type="minus" data-field=""
+                 ng-click="$ctrl.stepDown()" >
+                    <span class="glyphicon glyphicon-minus"></span>
+                </button>
+            </div>
+            <div>
+                <input type="text" id="quantity" name="quantity" class="form-control input-number" value="10" min="1" max="100"
+                ng-model="$ctrl.quantity">
+            </div>
+            <div class="input-group-btn">
+                <button type="button" class="quantity-right-plus btn btn-number" id="stepDown" data-type="plus" data-field=""
+                ng-click="$ctrl.stepUp()">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </button>
+            </div>
+        </div>
+    </div>

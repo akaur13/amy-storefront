@@ -1,0 +1,63 @@
+<div class="header row">
+    <div class="col-lg-2">
+        <h1>Hero</h1>
+    </div>
+    <div class="col-lg-2"></div>
+    <div class="col-lg-4">
+        <ul id="menu">
+            <li>HOME</li>
+            <li>
+                <span uib-dropdown on-toggle="toggled(open)">
+                    <a href id="simple-dropdown" uib-dropdown-toggle class="dropdown-link">
+                        SHOP
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="simple-dropdown">
+                        <li ng-repeat="choice in items">
+                            <a href>Loren Ipsum</a>
+                        </li>
+                        <li ng-repeat="choice in items">
+                            <a href>Loren Ipsum</a>
+                        </li>
+                    </ul>
+                </span>
+            </li>
+            <li>JOURNAL</li>
+            <li>
+                <span uib-dropdown on-toggle="toggled(open)">
+                    <a href id="simple-dropdown" uib-dropdown-toggle class="dropdown-link">
+                        MORE
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="simple-dropdown">
+                        <li ng-repeat="choice in items">
+                            <a href>Loren Ipsum</a>
+                        </li>
+                        <li ng-repeat="choice in items">
+                            <a href>Loren Ipsum</a>
+                        </li>
+                    </ul>
+                </span>
+            </li>
+        </ul>
+    </div>
+    <div class="col-lg-2"></div>
+    <div class="col-lg-2">
+        <div class="cart-trolley">
+        <span uib-dropdown on-toggle="toggled(open)" class="fa fa-shopping-cart">
+            <a href id="simple-dropdown" uib-dropdown-toggle class="dropdown-link">
+                MY CART {{$ctrl.selectedItems}}
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="simple-dropdown">
+                <li ng-repeat="choice in items">
+                    <a href>Loren Ipsum</a>
+                </li>
+                <li ng-repeat="choice in items">
+                    <a href>Loren Ipsum</a>
+                </li>
+            </ul>
+        </span>
+    </div>
+    </div>
+</div>

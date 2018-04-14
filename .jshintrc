@@ -1,0 +1,33 @@
+{
+  "bitwise": false,
+  "browser": true,
+  "curly": true,
+  "eqeqeq": true,
+  "jasmine": true,
+  "noarg": true,
+  "node": true,
+  "strict": true,
+  "undef": true,
+  "unused": true,
+  "latedef": "nofunc",
+  "sub": true,
+  "esversion":6,
+  "globals": {
+    "angular": false,
+    "inject": false,
+    "describe": false,
+    "beforeEach": false,
+    "it": false,
+    "expect": false,
+    "$": false,
+    "browser": false,
+    "element": false,
+    "by": false,
+    "saveAs": false,
+    "Dropzone": false,
+    "webvowl": false,
+    "d3": false,
+    "YASQE": false,
+    "EventSource": false
+  }
+}

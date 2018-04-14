@@ -1,0 +1,76 @@
+.cart{
+    background-color: #FFFFFF;
+    
+    padding-top: 100px;
+    h1{
+        text-align: center;
+    }
+    
+    .cart-row{
+        td{
+            padding: 20px 0 40px 0;
+        }
+        .chart-group-grid{
+            width: 120px;
+        }
+        .cart-remove{
+            font-size: 2em;
+            cursor: pointer;
+        }
+        .gem-image{
+            img{
+                width:170px; 
+                height:100px;
+                padding-right: 5px;
+            }
+            float:left;
+        }
+        .cart-bill{
+            .bill-element{
+                padding: 10px 40px;
+            }
+            .bill-amount{
+                padding: 10px 0px;
+            }
+        }
+    }
+}
+    .cart-heading{
+        text-align: center;
+        padding-bottom: 50px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 5rem;
+    }
+    .header{
+        background-color: #FFFFFF;
+        margin-bottom: 50px;
+        padding: 0px 20px;
+        width: 100%;
+        z-index: 9;
+        text-align: justify;
+        h1{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        ul#menu{
+            margin-top: 25px;
+            li {
+                display:inline;
+                padding: 10px;
+                
+            }
+        }
+        .dropdown-link{
+            color: #000000;
+            &:hover{
+                text-decoration: none;  
+            }
+        }
+        .cart-trolley{
+            margin-top: 25px;
+        }
+    }
+
+    .app-ground{
+        background-color:#F6F6F6;
+        font-family: Arial, Helvetica, sans-serif;
+    }
