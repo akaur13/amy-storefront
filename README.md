@@ -1,6 +1,6 @@
-# Semantiro-frontend
+# Amy-shopfront
 
- This repo is for semantic-frontend, including only frontend files, like html, javascript, css, images etc.
+ This repo is for Amy-shopfrontgit, including only frontend files, like html, javascript, css, images etc.
 
 ## Preconfig
 

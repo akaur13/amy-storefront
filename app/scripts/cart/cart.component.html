@@ -1,61 +1,69 @@
 <header selected-items="$ctrl.appData.length"></header>
-<h1 class="cart-heading">Shopping Cart</h1>
-<div class="cart container ">
-    
-    <div class="table-responsive text-uppercase" ng-if="$ctrl.appData.length > 0">
-        <table class="table table-hover ">
-            <thead>
-                <tr class="row">
-                    <th class="col-sm-6 text-muted small ">Product</th>
-                    <th class="col-sm-2 text-muted small ">Quantity</th>
-                    <th class="col-sm-1 text-muted small ">Total</th>
-                    <th class="col-sm-1 text-muted small ">Action</th>
-                </tr>
-            </thead>
-            <tr ng-repeat="gem in $ctrl.appData" class="row cart-row">
-                <td class="col-lg-6 col-sm-6 cart-column">
-                    <div class="gem-image">
+
+<div class="cart container text-uppercase ">
+    <h1 class="cart-heading">Shopping Cart</h1>
+    <div class="cart-table" ng-if="$ctrl.appData.length > 0">
+        <div class="row cart-row table-head text-muted small">
+            <div class="col-lg-6">PRODUCT</div>
+            <div class="col-lg-2">QUANTITY</div>
+            <div class="col-lg-2">TOTAL</div>
+            <div class="col-lg-2">ACTION</div>
+        </div>
+        <div class="row cart-row" ng-repeat="gem in $ctrl.appData">
+            <div class="col-sm-6 prodcut-desc row">
+                <span>
+                    <div class="col-xs-4">
                         <img ng-src="./storefront/media/{{gem.image}}" alt="gem-image">
                     </div>
-                    <div>
-                        <p class="text-muted small ">{{gem.brand}}</p>
-                        <p class="">{{gem.title}}</p>
-                        <p class="">color</p>
+                    <div class="col-xs-8 small ">
+                        <span>
+                            <p class="text-muted ">{{gem.brand}}</p>
+                            <p class="">{{gem.title}}</p>
+                            <!-- <p class="">color</p> -->
+                        </span>
                     </div>
-                </td>
-                <td class="col-lg-2">
+                </span>
+            </div>
+            <div class="col-sm-6 product-pricing row">
+                <div class="col-xs-4">
                     <stepper quantity="gem.quantity" calculate-total="$ctrl.calculateTotal()"></stepper>
-                </td>
-                <td class="col-lg-1 text-muted small">${{gem.price}}
-                </td>
-                <td class="col-lg-1" ng-click="$ctrl.remove($index)">
-                    <span id="remove" class=" text-muted  cart-remove">X</span>
-                </td>
-            </tr>
-            <tr class="cart-row">
-               <!--  <td colspan="2" class="col-lg-8"></td> -->
-                <td colspan="5" class="col-lg-4 col-sm-4">
-                    <div class="cart-bill text-muted small pull-right">
-                        <div class="bill-element">cart overview</div>
-                        <div class="pull-right">
-                            <div class="bill-amount">${{$ctrl.totalAmount}}</div>
-                            <div class="bill-amount">${{$ctrl.totalAmount}} CAD</div>
-                        </div>
-                        <div class="pull-left">
-                            <div class="bill-element">subtotal</div>
-                            <div class="bill-element">Total</div>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-            <tr class="cart-row">
-                <td colspan="2"><a href="#">continue shopping</a></td>
-                <td colspan="3"><button type="submit" class="btn">checkout</button></td>
-            </tr>
-        </table>
-
+                </div>
+                <div class="col-xs-1"></div>
+                <div class="col-xs-3">
+                    <span class="gem-price text-muted">
+                        ${{gem.price * gem.quantity}}
+                    </span>
+                </div>
+                <div class="col-xs-2">
+                    <span id="remove" class=" text-muted  cart-remove" $ctrl.remove($index)>X</span>
+                </div>
+            </div>
+        </div>
+        <div class="row cart-row">
+            <div class="col-lg-6"></div>
+            <div class=" col-lg-6 cart-bill text-muted small">
+                <div class="bill-element">cart overview</div>
+                <div class="pull-right">
+                    <div class="bill-amount">${{$ctrl.totalAmount}}</div>
+                    <div class="bill-amount">${{$ctrl.totalAmount}} CAD</div>
+                </div>
+                <div class="pull-left">
+                    <div class="bill-element">subtotal</div>
+                    <div class="bill-element">Total</div>
+                </div>
+            </div>
+        </div>
+        <div class="row cart-row">
+            <div class="col-lg-6 cart-checkout continue-link">
+                <a class="dropdown-link" href="#">continue shopping</a>
+            </div>
+            <div class="col-lg-6 cart-checkout">
+                <button type="submit" class="btn">checkout (${{$ctrl.totalAmount}})</button>
+            </div>
+        </div>
     </div>
     <div ng-if="$ctrl.appData.length === 0">
-        This cart is empty!  <a href="#">continue shopping</a>
+        This cart is empty!
+        <a href="#">continue shopping</a>
     </div>
 </div>

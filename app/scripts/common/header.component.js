@@ -15,7 +15,7 @@
       };
 
       angular.extend(vm, {
-       
+        toggle: false
       });
     
     }
