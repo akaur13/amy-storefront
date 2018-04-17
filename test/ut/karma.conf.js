@@ -19,8 +19,6 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      // bower:js
-      // endbower
       'app/scripts/**/*.js',
       'test/mock/**/*.js',
       'test/spec/**/*.js',

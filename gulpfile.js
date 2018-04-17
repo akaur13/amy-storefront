@@ -198,7 +198,7 @@ gulp.task('clean:tmp', function(cb) {
 });
 
 gulp.task('start:client', ['start:server', 'styles', 'html'], function() {
-  openURL('http://localhost:8090/index.html#/login');
+  openURL('http://localhost:8080/index.html#/login');
 });
 
 gulp.task('start:server', function() {
@@ -206,7 +206,7 @@ gulp.task('start:server', function() {
     root: ['.tmp', 'data', 'manual_components', 'node_modules', conf.app],
     livereload: true,
     // Change this to '0.0.0.0' to access the server from outside.
-    port: 8090,
+    port: 8080,
     middleware: function(connect, opt) {
       return [
         ['/node_modules',
@@ -258,7 +258,7 @@ gulp.task('serve:prod', function() {
   $.connect.server({
     root: [conf.dist],
     livereload: false,
-    port: 8090
+    port: 8080
   });
 });
 

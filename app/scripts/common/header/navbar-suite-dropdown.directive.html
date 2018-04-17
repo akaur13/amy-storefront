@@ -1,0 +1,27 @@
+<ul class="nav navbar-nav nav-suite-collapse">
+  <li uib-dropdown>
+    <a href role="button" uib-dropdown-toggle>
+      <span>{{g('ONTOCURO','Ontocuro&trade;')}}</span>
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu" uib-dropdown-menu>
+      <li ss-auth-check-show="canAccessLibrary">
+        <a ui-sref="main.ontocuro.library-list({pageSize: 10, currentPage: 1})">
+          {{g('ONTOCURO','Ontocuro&trade;')}}
+        </a>
+      </li>
+      <li ss-auth-check-show="canAccessProcessor">
+        <a ui-sref="main.datacuro.datasource-list({pageSize: 10, currentPage: 1})">
+          {{g('DATACURO', 'Datacuro&trade;')}}
+        </a>
+      </li>
+      <!--<li><a ui-sref="main.admin">{{g('ADMIN_SUITE', 'Administration')}}</a></li>-->
+      <!--<li><a ui-sref="main.application">{{g('APPLICATION_SUITE', 'Application')}}</a></li>-->
+      <!--<li><a ui-sref="main.utility">{{g('UTILITY_SUITE', 'Utility')}}</a></li>-->
+      <li><a ui-sref="main.security.profile">{{g('SECURITY_SUITE', 'Security')}}</a></li>
+    </ul>
+  </li>
+</ul>
+<ul class="p-l-0 navbar-nav hidden-xs" id="nav-header-divider">
+  <hr/>
+</ul>

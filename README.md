@@ -6,10 +6,8 @@
 
 Before you clone this repo, you need to install the latest node.js, currently it is v6.3.1.
 
-After Node.js is installed, execute the commands below to install bower and gulp-cli:
+After Node.js is installed, execute the commands below to install npm and gulp-cli:
 ```
-npm install bower -g
-
 npm install gulp-cli -g
 ```
 Install ruby and sass, because we use sass as the css preprocessor.
@@ -19,7 +17,6 @@ Clone the repository, and go to the root folder of this repo, and run the comman
 ```
 npm install
 
-bower install
 ```
 
 ## How to run dev mode locally

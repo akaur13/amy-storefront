@@ -9,7 +9,7 @@
   <meta http-equiv="cache-control" content="max-age=0">
   <link rel="shortcut icon" type="image/png" href="" sizes="16x16">
   <!-- build:css(.) styles/vendor.css -->
-  <!-- bower:css -->
+  <!-- npm:css -->
   <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css"/>
   <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.css"/>
   <link rel="stylesheet" href="/node_modules/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css"/>
@@ -22,13 +22,15 @@
   <link rel="stylesheet" href="/node_modules/yasgui-yasqe/dist/yasqe.css">
 
 
-  <!-- endbower -->
+  <!-- endnpm -->
   <!-- endbuild -->
 
   <!-- build:css(.tmp) styles/app.css -->
-  <!-- bower:css -->
+  <!-- npm:css -->
   <link rel="stylesheet" href="styles/cart.css">
-  <!-- endbower -->
+  <link rel="stylesheet" href="styles/stepper.css">
+
+  <!-- endnpm -->
   <!-- endbuild -->
 </head>
 <body>
@@ -62,7 +64,7 @@
 
 
 <!-- build:js(.) scripts/vendor.js -->
-<!-- bower:js -->
+<!-- npm:js -->
 <script src="/node_modules/jquery/dist/jquery.js"></script>
 <script src="/node_modules/dropzone/dist/dropzone.js"></script>
 <script src="/node_modules/angular/angular.js"></script>
@@ -83,7 +85,7 @@
 <script src="/node_modules/yasgui-yasqe/dist/yasqe.bundled.js"></script>
 <script src="/node_modules/event-source-polyfill/src/eventsource.js"></script>
 
-<!-- endbower -->
+<!-- endnpm -->
 <!-- endbuild -->
 
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
@@ -94,7 +96,12 @@
 
 <!-- common -->
 <script src="scripts/common/stepper.component.js"></script>
-<script src="scripts/common/header.component.js"></script>
+<script src="scripts/common/header/header.component.js"></script>
+<script src="scripts/common/header/navbar-suite-dropdown.directive.js"></script>
+<script src="scripts/common/header/navbar.directive.js"></script>
+<script src="scripts/common/header/navbar-common-menu.component.js"></script>
+
+
 
 <!-- cart -->
 <script src="scripts/cart/cart.component.js"></script>
